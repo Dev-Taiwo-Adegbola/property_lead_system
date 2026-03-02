@@ -1,0 +1,21 @@
+<header class="flex justify-between bg-base-100 shadow-sm py-4 px-6">
+  <a class="text-xl font-semibold flex items-center gap-2" href="#">
+<svg width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M31.2539 11.7142C31.2921 11.7366 31.3154 11.7773 31.3154 11.8216V30.8108C31.3154 30.8799 31.2595 30.9358 31.1904 30.9358H18.7832V18.9212C18.783 16.7814 17.048 15.0463 14.9082 15.0462H3.75V11.8216C3.75006 11.7771 3.77408 11.7365 3.8125 11.7142L17.4697 3.76689C17.5086 3.74428 17.5568 3.74428 17.5957 3.76689L31.2539 11.7142ZM31.1904 34.6858C33.3305 34.6858 35.0654 32.9509 35.0654 30.8108V11.8216C35.0654 10.442 34.332 9.16684 33.1396 8.47294L19.4814 0.525679C18.2768 -0.175203 16.7886 -0.175249 15.584 0.525679L1.92578 8.47294C0.733585 9.16688 6.32056e-05 10.4421 0 11.8216V16.9212C0 17.4005 0.183338 17.8621 0.512695 18.2102L15.5459 34.0999C15.9 34.4741 16.393 34.6858 16.9082 34.6858H31.1904ZM15.5459 34.0999L16.9072 32.8108H16.9082L15.5459 34.0999Z" fill="oklch(66.6% 0.179 58.318)"/>
+</svg>
+    <span>
+      PrimeNest Realty
+    </span>
+  </a>
+  <div class="navMenu text-stone-800 max-lg:fixed z-501  max-lg:-translate-x-[120%] transition-all duration-300 max-lg:inset-0 max-lg:h-screen max-lg:glass flex max-lg:flex-col justify-center items-center max-lg:gap-10   gap-5">
+    <button id="close-nav" class="absolute top-8 right-8 btn btn-circle lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="red"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /> </svg></button>
+    <a href='{% url "home_page" %}' class="btn btn-ghost hover:bg-amber-100 border-0 w-30 font-medium">Home</a>
+    <a href='{% url "properties_page" %}' class="btn btn-ghost hover:bg-amber-100 border-0 w-30 font-medium">Properties</a>
+    <a href='#' class="btn btn-ghost hover:bg-amber-100 border-0 w-30 font-medium">Profile</a>
+    <a href='#' class="btn btn-ghost hover:bg-amber-100 border-0 w-30 font-medium">experience</a>
+    <a href='{% url "contact_us" %}' class="btn  bg-amber-600 text-amber-50 hover:bg-amber-700 w-30">Contact</a>
+  </div>
+  <button id="nav-button" class="lg:hidden btn btn-ghost btn-circle">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
+  </button>
+</header>

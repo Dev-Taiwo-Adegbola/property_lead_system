@@ -1,0 +1,43 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+{% include 'core/navigation.html' %}
+<section class="w-full bg-amber-950 bg-[url('/static/img/Hero.jpg')] bg-fixed bg-blend-overlay object-cover  flex flex-col items-center justify-center   p-8 lg:px-20 lg:gap-10 text-amber-50">
+        <div class='  text-center '>
+            <h3 class='text-3xl lg:text-5xl font-bold w-full lg:w-full text-center   '>Listed Properties</h3>
+            <p class='text-sm tracking-wide leading-7 text-center'>
+                all available properties for sale, or rent
+            </p>
+            
+        </div>
+
+        <form action="" class='border w-full md:w-[85%] my-10 py-10 px-7 gap-2 glass card card-md card-side justify-between max-md:flex-col '>
+            <input type="text" name='search' placeholder='Search for Properties' class='w-4/12  bg-amber-50 outline-0 text-stone-700 p-2 rounded max-md:w-full'>
+           
+            <input type="text" name='price' placeholder='filter by price' class='w-3/12  bg-amber-50  outline-0 text-stone-700 p-2 rounded max-md:w-full'>
+            <select name='status' class=' w-3/12 bg-amber-50 outline-0 text-stone-700 p-2 rounded max-md:w-full'>
+                <option value="">filter by availability</option>
+                <option value="">for sale</option>
+                <option value="">Sold</option>
+                <option value="">to let</option>
+            </select>
+            <button type='submit' class='btn btn-outline w-2/12 hover:bg-amber-600 hover:border-amber-600 max-md:w-full'>Filter</button>
+
+        </form>
+        <h2 class='text-xl md:text-2xl'>
+        
+        {% if request.GET.search is not None or request.GET.price is not None or request.GET.status is not None %}
+            {{Properties.count}} properties found
+        {% endif %}
+            
+    </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+                    {% include 'core/card.html' %}
+                    
+                
+            </div>
+        
+    </section>
+{% include 'core/footer.html' %}
+{% endblock content %}

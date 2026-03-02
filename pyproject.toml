@@ -1,0 +1,19 @@
+[project]
+name = "property_lead_system"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Taiwo Adegbola",email = "dr.otral@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14,<4.0"
+dependencies = [
+    "django (>=6.0.2,<7.0.0)",
+    "django-tailwind (>=4.4.2,<5.0.0)",
+    "django-unfold (>=0.81.0,<0.82.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,23 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+{% include 'core/navigation.html' %}
+<section class="w-full bg-amber-950 bg-[url('/static/img/Hero.jpg')] bg-fixed bg-blend-overlay object-cover  flex flex-col items-center justify-center   p-8 lg:px-20 lg:gap-10 text-amber-50">
+        
+
+        <form action="" class='border w-full md:w-[70%] my-10 py-10 px-7 gap-2 glass card card-md card-side justify-between flex-wrap '>
+            <h1 class='text-2xl font-semibold w-full mb-5'> Send us a Message</h1>
+            <input type="text" name='search' placeholder='Enter your name' class='w-[49%]  bg-amber-50 outline-0 text-stone-700 p-2 rounded max-md:w-full'>
+            <input type="email" name='search' placeholder='Your Email' class='w-[49%]  bg-amber-50 outline-0 text-stone-700 p-2 rounded max-md:w-full'>
+           
+            <textarea type="text" name='price' placeholder='your Message' class='w-full h-60 resize-none  bg-amber-50  outline-0 text-stone-700 p-2 rounded max-md:w-full'></textarea>
+            
+            <button type='submit' class='btn btn-outline w-4/12 hover:bg-amber-600 hover:border-amber-600 max-md:w-full'>Send Message</button>
+
+        </form>
+        
+
+        
+        
+    </section>
+{% endblock content %}
